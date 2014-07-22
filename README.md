@@ -41,7 +41,7 @@ This is the widget core. All the magic happens here.
 The custom `wpc-appid` meta tag must contain the Windows Phone Store application
 ID. This is the application that will be linked in the call out. The code below
 jumps to the
-[http://www.windowsphone.com/en-us/store/app/level/c14e93aa-27d7-df11-a844-00237de2db9e](Level)
+[Level](http://www.windowsphone.com/en-us/store/app/level/c14e93aa-27d7-df11-a844-00237de2db9e)
 app, of course you need to change that to your application ID.
 
 ```xml
@@ -124,7 +124,7 @@ tag, but if you alter the CSS you can style the message anyway you want. You can
 also use the `%appLink` keyword that will be replaced with the Windows Phone
 link. For example:
 
-```xml
+```js
 var callout = new WPC({
     message: '<p><a href="%appLink">Ciao!</a></p>'
 });
@@ -153,7 +153,7 @@ access. Default: `0`
 The name of the local storage variable. This doesn't need to be changed unless
 you have multiple application on the same domain, in which case you can give
 each application a different session name. This is actually only needed in
-conjuction `maxDisplayCount` and pace options. Default: `'com.nokia.wpc'`
+conjunction `maxDisplayCount` and `pace` options. Default: `'com.nokia.wpc'`
 
 ### follow ###
 
@@ -178,7 +178,7 @@ called when the message is shown and hidden. This page takes advantage of these
 callbacks to push the page up and down, please note that by default the script
 doesn't touch the DOM in any way. This would be the code:
 
-```xml
+```js
 var wrapper = document.getElementById('wrapper');
 var callout = new WPC({
     debug: true,
