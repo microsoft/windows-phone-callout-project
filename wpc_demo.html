@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+<title>WPC demo</title>
+
+<!-- <meta name="msapplication-TileImage" content="images/icon.png"> -->
+<meta name="msapplication-TileColor" content="#01a4ef">
+<meta name="wpc-appid" content="c14e93aa-27d7-df11-a844-00237de2db9e">
+
+<link rel="stylesheet" type="text/css" href="wpc_source/wpc.css">
+<script type="text/javascript" src="wpc_source/wpc.js"></script>
+
+<style type="text/css">
+body {
+	background: #e4e4e0;
+	font: 15px 'Segoe ui', sans-serif;
+	padding: 0;
+	margin: 0;
+	line-height: 1;
+}
+
+.wrapper {
+	margin: 0;
+	-webkit-transition: margin 0.5s ease-out;
+	-moz-transition: margin 0.5s ease-out;
+	-ms-transition: margin 0.5s ease-out;
+	-o-transition: margin 0.5s ease-out;
+	transition: margin 0.5s ease-out;
+}
+
+h1, h2, h3, h4 {
+	padding: 0;
+	margin: 0 0 1em 0;
+	line-height: 1em;
+}
+
+section {
+	display: block;
+	padding: 1.5em;
+	line-height: 1.5em;
+}
+
+section:nth-child(odd) {
+	background: #F4F4F0;
+}
+
+section:nth-child(even) {
+	background: #e4e4e0;
+}
+
+p {
+	padding: 0 0 0 0;
+	margin: 0 0 1em 0;
+}
+
+ul {
+	padding: 0 0 0 2em;
+	margin: 0 0 1em 0;
+}
+
+h1 {
+	font-size: 2.5em;
+	text-align: center;
+}
+
+h2 {
+	font-size: 1.4em;
+	text-align: center;
+}
+
+h3 {
+	font-size: 2em;
+}
+
+h4 {
+	font-size: 1.3em;
+}
+
+pre {
+	font-family: monospace;
+	background: rgba(255,255,255,0.4);
+	padding: 1em;
+	font-size: 0.9em;
+	margin: 0 0 1em 0;
+	overflow: hidden;
+	color: #1C4A9C;
+}
+
+:last-child {
+	margin: 0;
+}
+
+
+</style>
+</head>
+
+<body><div style="opacity: 1; color: white; background-color: rgb(1, 164, 239); transition-duration: 500ms; transform: translate(0px, 0px); width: 1416px; left: -1px; top: -1px; font-size: 10px;" class="wpc-container"><p>This is the message in English. You should really install the native application. This copy must be edited of course.<br><a class="wpc-button" style="border-color:white" href="http://windowsphone.com/s?appId=c14e93aa-27d7-df11-a844-00237de2db9e" target="_top">Download the app</a></p><div class="wpc-icon" style="background-image:url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAVAAAAFQCAMAAADeNtbrAAACu1BMVEX///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////+DBvXuAAAAAXRSTlMAQObYZgAAAAFiS0dEAIgFHUgAAAAJcEhZcwAALiUAAC4lAfime+0AAAAHdElNRQfeBwIQMxbgULB1AAAHsklEQVR42u3d/X/TRADH8fuTiw8URAdjUlCEqoBTFMqTdEykgECZiHSgozyMTZyMwXhY243+GW68mq0PaXO5XJrL3ef7A7yW5q7rm8vlcrkGIYxK5sCpP56+bK5n4d7lb7YJopzR0nvH7jw9AE3ofFauNwdkYQQi+RyaaQZn9VugZHJ4rimbN2gF5eq7Zqhcgkyj5kYew9Ynx942lbIInV+mmspZQq8ngef02uxvxeJkufzXss+LcwB2pjSI8tFPme79z6907VPEsC25tb6Dov5Qlzr3RHEr9/sM2q9vH1zuesdVE45eGn6as2MyRdsvTEeRfJ8vfTRnsrKlZ9saNJYbOdWjuXwwTPkHWwXH0BRiopvzftgaFjaLvoJTfNHFeVOhjlVO9Fvp5HyiVMeOzfIV5z07hp+NrGIt92iirTxp97yhoZ077jnW7nk4QkUVr5ILboO2zXyu6emK6057XtbmKV5zzHec4aN6imN+oNvHJ29WFzfOe/XZaz/Y73lJ50SRV9PRAfMDK+OuNNBz+iqb8TZM+85fnbDY82DE4Xxn/u6eIDnmPyO4bC/oktbB46GeyvrNWNt/xP+stbpAUFtFxzV/QHnQFTtBN+9cXoxQSfFqj9/HgaDNKbuPeOUa9i+23473qtvvbVhounXQex9uPtppffPnN636vvfd+8jzdtBrFnoe8T5cTqn4k57G5t0J+aVfkSm7m+jjCJ8t+8qH5k5rw+3+5bYmX3fYe8QrLO6s+naH5daGhwNKbs5uVe0FDX2O37nmf365LLHG6SOLj3nvk4VdI9+9BOoT74ULrQ3PpBq3vaAhi93qHgHt8V45I3WxHu1UaHD2qoHe6H/T+UdvzePACmqtvX63DfS0EujJTs6z7a8db218J/W+1i2JuCbVnvpeXfksiZADFbZ2on96K2nDFKoPWhLhOOh9hYvAyTbP3sGB46Dzrc81qXTAN3xelQStWwr6IvzdpInBE5qSoI8svfj0GkpBoYH633OWBL3d2u0rS8f1x6VLjG6CfhAF9Er4f8lUgcrfKf/HK3JFRAE939rtV+dBg+Y1JEG9C6qy66BZr8RENNCvW7tNuw5aChpASoLul5g2dQK0HvTtLknQXGu3f10HDVyWKwn6uaXfXlYGFRFBxyxd4xQWdKcu0L2WPqgkLOjJQAdJ0FGleUP7QCuBN4klQfdY+r3QsKCLgQtmJUF3y+1mPah3R31fVNARQDv23waoXlABKKBOgC5NAKoLdLGQEfYlMVBbkxbQfHljLepaCVANlpVa20KAtwVAdVl6eZYDVMVy0DOf72YA1WXpLQoouQVaK++LzdLo7jQGUMXxZShLc7tT/aDDsjS0O00aNJKlid1pgqA6LM3rTpMB1WlpWHc6dNA4LE3qTpVAa+WcaZbGdKehb9INcUyUyu40/HJGgy1N6E5jBU3A0st0xjLQXRdfNpNN47QtoAm2SwMeaaIX1BzL9IMaZplq0Hyl0TQyKQQ11jJJUOWxusmWiYHus9QyNV/MTYtlGkBTZWk4aPoszQVNqaWRoGm2NA009ZYGgdphaQaoRZaJg9pmmSSolZYJgdprOXxQyy2HCpqvrDadCJapAnXLMl5QBy1jA3XVMg5Qpy01g2KpDxRLfaBY6gPFUh8oljpBa6jpBQUNUEABJYACCiiggAIKKKCAAgoooARQQAElgAIKKKB2ga5Mn7gDqI7MF70H/4wCGinVYtcjlABVy7seSUA1SwIaMmsBkoDKZrVaHJH/hQEdJFnIhv6FAfVJozKeFYoBtD1vyuqSgLbnv4frf5zRsWLdcdC3m01y/YcDgKpnufvgBlQxz8v5fm8EqM4rHEBDjMtzcm8E6OC8DjUGArR/XqqMJgHV+S6AAgoooIACCiiggAIKKKCAAgoooIACCiiggAIKKKCAAgoooIACCiiggAIKKKCAAgoooIACCiiggAIKKKCAAgoooIACmiLQQk4hE+sF7+Y0hGffpTmAAgpos5lROZd8ul7wgo6T0jnO8pzlAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQAEFFFBAAQUUUEABBRRQQPWBLl4/+iGgGkFbqcv9N+iAhs2cnCugYTuCgP8jHVDNroBqdgVUR1aqxRFA9Wep/F1h/a88oLozF2qkBegwXAHV7Apo8IiglANUf2p3C7sATaC9Aqp6ZZAHdCiugGp2BVRf6jNnd9v4dEaHAiiggAIKKKCAAgoooIACSgAFFFBAAQUUUEABBRRQQAEFFFBACaBGgYrxKm5aQd8nX1lFTycoqnGAohoHKKpxgKIaByiqcYA6ripijJOqIu64piqGEodUxfDihqoYcqxXFUnEZlWRWCxVFcnGPlVhQKxSFabEFlVhVCxQFeZlpFQDFFXTQVOrKoxPylRFOpIeVZGipEJVpC2mq4pUxmBVkd6YqSpSHuNUhQ0xSVVYEzPWBN4SdiXZtjoj7EwyqgsjwuoMtwdYmxBOZEhttSScSsyq1YxwMTGpvsgJl6NZtV4QRJ9qCUqNqg8yGOpTXc5hp0+1QcepU3UKK42q81mQ9Km+yoOjT3WVjlOn6i0wNKrO0nEamv8BBL7EldTSinQAAAAASUVORK5CYII=)"></div><button class="close"></button></div>
+<div style="margin-top: 180px;" class="wrapper" id="wrapper">
+
+<script>
+
+var wrapper = document.getElementById('wrapper');
+var callout = new WPC({
+	debug: true,
+	onShow: function () {
+		wrapper.style.marginTop = '180px';
+	},
+	onHide: function () {
+		wrapper.style.marginTop = '0';
+	}
+});
+
+</script>
+
+<section>
+	<h1>WPC | Windows Phone Callout</h1>
+	<h2>by the Windows Phone Store Awareness Program :)</h2>
+</section>
+
+<section>
+	<h3>Abstract</h3>
+	<p>WPC is a small, easy to use JavaScript widget that shows a call out 
+inviting the user to visit the Windows Phone Store and download the 
+native application associated to the website she is visiting.</p>
+</section>
+
+<section>
+	<h3>Features</h3>
+	<ul>
+		<li><strong>Zero configuration</strong>. Include a couple of lines to 
+your page and let us take care of the rest, if you want more control you
+ can disable the auto-pilot and fine tune the script behavior.</li>
+		<li><strong>Resolution independent</strong>. Whatever screen 
+resolution you have, whatever viewport position or scaling the user is 
+looking at, the message is always on the right spot.</li>
+		<li><strong>Multilingual</strong>. The message is displayed in the correct user's locale.</li>
+		<li><strong>Feather light</strong>. It's so small your server wouldn't even notice.</li>
+		<li><strong>Windows Phone only</strong>. The script is totally ignored by any other device.</li>
+	</ul>
+</section>
+
+<section>
+	<h3>Basic implementation</h3>
+	<p>The callout is very easy to add to any website and doesn't require 
+coding skill. To work properly the widget needs three elements that have
+ to be added to the page <code>HEAD</code>.</p>
+
+	<h4>The CSS</h4>
+	<p>The CSS comes with some basic styling for the call out. You can use it as is, or customize it as you please.</p>
+	<pre>&lt;link rel="stylesheet" type="text/css" href="wpc.css"&gt;</pre>
+
+	<h4>The Script itself</h4>
+	<p>This is the widget core. All the magic happens here.</p>
+	<pre>&lt;script type="text/javascript" src="wpc.js"&gt;&lt;/script&gt;</pre>
+
+	<h4>The Meta tag</h4>
+	<p>The custom <code>wpc-appid</code> meta tag must contain the Windows 
+Phone Store application id. This is the application that will be linked 
+in the call out. The code below jumps to the <a href="http://www.windowsphone.com/en-us/store/app/level/c14e93aa-27d7-df11-a844-00237de2db9e">Level</a> app, of course you need to change that to your application ID.</p>
+
+	<pre>&lt;meta name="wpc-appid" content="c14e93aa-27d7-df11-a844-00237de2db9e"&gt;</pre>
+
+	To sum up, all you need to do is to add the followings inside your document <code>HEAD</code>.
+
+<pre>&lt;meta name="wpc-appid" content="c14e93aa-27d7-df11-a844-00237de2db9e"&gt;
+&lt;link rel="stylesheet" type="text/css" href="styles/wpc.css"&gt;
+&lt;script type="text/javascript" src="js/wpc.js"&gt;&lt;/script&gt;
+</pre>
+</section>
+
+<section>
+	<h3>Spice up the callout</h3>
+	<p>It is completely optional, but you can customize the message by 
+setting a couple of additional Microsoft-standard meta tags (that you 
+probably already have). If you don't set the tile image, we are using 
+one default Windows logo for you.</p>
+
+	<p>You can have an icon next to the text by adding the <code>msapplication-TileImage</code> meta.</p>
+
+	<pre>&lt;meta name="msapplication-TileImage" content="images/icon.png"&gt;</pre>
+
+	<p>You can also set the call out background color with the <code>msapplication-TileColor</code> meta. The foreground color is automatically computed, how cool is that?</p>
+	<pre>&lt;meta name="msapplication-TileColor" content="#2A75DF"&gt;</pre>
+</section>
+
+<section>
+	<h3>Advanced usage</h3>
+	<p>For the adventorous there's of course an advanced mode. You can call the message programmatically like so:</p>
+
+<pre>&lt;script&gt;
+var callout = new WPC(<em>options</em>);
+&lt;/script&gt;
+</pre>
+
+	Where <code>options</code> is an object to customize the script 
+andbehavior and callout look. Please note that it's your duty to wait 
+for the document to be ready for DOM manipulation. In case on "manual 
+mode", the script doesn't make any check. Usually it is sufficient to 
+place the above code anywhere inside the <code>body</code> tag.
+</section>
+
+<section>
+	<h3>API: options</h3>
+
+	<h4 id="appId">appId</h4>
+	<p>Instead of using the <code>wpc-appid</code> you may pass the 
+application ID with this option. It takes precedence over the meta tag 
+(ie: the meta tag is ignored and this value taken instead).</p>
+
+	<h4 id="tileImage">tileImage</h4>
+	<p>Alternative to the <code>msapplication-TileImage</code> meta tag. You can pass the URL of the image that will be displayed in the callout. It overrides the meta tag value.</p>
+
+	<h4 id="tileColor">tileColor</h4>
+	<p>Alternative to the <code>msapplication-TileColor</code> meta tag. Sets the background color of the callout. It overrides the meta tag value.</p>
+
+	<h4 id="tileTextColor">tileTextColor</h4>
+	<p>Used to set the foreground color of the callout. Otherwise the value
+ is automatically computed (white on dark background, black on light 
+background).</p>
+
+	<h4 id="message">message</h4>
+	<p>You can pass a custom message that will be used instead of the default. Note that this option negates the localization feature.</p>
+
+	<p>The message can contain markup, actually it expects the text to be inside a <code>P</code> tag, but if you alter the CSS you can style the message anyway you want. You can also use the <code>%appLink</code> keyword that will be replaced with the Windows Phone link. Eg:</p>
+
+<pre>var callout = new WPC({
+	message: '&lt;p&gt;&lt;a href="%appLink"&gt;Ciao!&lt;/a&gt;&lt;/p&gt;'
+});
+</pre>
+
+	<p>This would show a custom message with the word "ciao!" linked to the Windows Phone application.</p>
+
+	<h4 id="closeButton">closeButton</h4>
+	<p>Whether or not to display the close button. Default: <code>true</code></p>
+
+	<h4 id="maxDisplayCount">maxDisplayCount</h4>
+	<p>Absolute number of times the message will be shown to each user. Set to <code>0</code> to always show. Default: <code>0</code></p>
+
+	<h4 id="pace">pace</h4>
+	<p>Time to wait before showing the message again. This may be used to 
+prent the message to pop up too many time per user session. Set to <code>0</code> to show at each access. Default: <code>0</code></p>
+
+	<h4 id="session">session</h4>
+	<p>The name of the local storage variable. This doesn't need to be 
+changed unless you have multiple application on the same domain, in 
+which case you can give each application a different session name. This 
+is actually only needed in conjuction <code>maxDisplayCount</code> and <code>pace</code> options. Default: <code>'com.nokia.wpc'</code></p>
+
+	<h4 id="message">follow</h4>
+	<p>Should the message follow the viewport during scrolling or stay fixed on top. Default: false (fixed on top)</p>
+
+	<h4 id="message">closeAction</h4>
+	<p>What action to perform when the user tap the close button. The options are: <code>postpone</code>, to show the message again only after 30 minutes, and <code>optout</code> to never show the call out again.</p>
+
+	<h4 id="debug">debug</h4>
+	<p>Set to <code>true</code> to display the callout on every device (not just Windows Phone). Useful in development phase.</p>
+</section>
+
+<section id="callbacks">
+	<h3>API: callbacks</h3>
+	<p>The widget offers two callbacks: <code>onShow</code> and <code>onHide</code>.
+ They are respectively called when the message is shown and hidden. This
+ page takes advantage of these callbacks to push the page up and down, 
+please note that by default the script doesn't touch the DOM in any way.
+ This would be the code:</p>
+
+<pre>var wrapper = document.getElementById('wrapper');
+var callout = new WPC({
+	debug: true,
+	onShow: function () {
+		wrapper.style.marginTop = '180px';
+	},
+	onHide: function () {
+		wrapper.style.marginTop = '0';
+	}
+});
+</pre>
+
+</section>
+
+
+<section>
+	<h3>API: methods</h3>
+	<p>All methods are public (of course, this is Javascript) but the only features you may need are:</p>
+
+	<h4 id="optOut">optOut()</h4>
+	<p>This is never used internally but can be implemented by the diligent
+ developer to opt-out a user from the call out display, eg: you may add a
+ "Do not show this message again" option.</p>
+
+	<h4 id="clearSession">clearSession()</h4>
+	<p>Useful in development phase to clear the user session if you use <code>maxDisplayCount</code> or <code>pace</code> options.</p>
+</section>
+
+<section>
+	<h3>WordPress Integration</h3>
+	<p>The simplest way to integrate the script into a WordPress theme is to place the required code and metas in the <code>header.php</code> file. For example, this is an excerpt of the header file that comes with a default installation of WordPress.</p>
+
+<pre>&lt;head&gt;
+	&lt;meta charset="&lt;?php bloginfo( 'charset' ); ?&gt;"&gt;
+	&lt;meta name="viewport" content="width=device-width"&gt;
+	&lt;title&gt;&lt;?php wp_title( '|', true, 'right' ); ?&gt;&lt;/title&gt;
+	&lt;link rel="profile" href="http://gmpg.org/xfn/11"&gt;
+	&lt;link rel="pingback" href="&lt;?php bloginfo( 'pingback_url' ); ?&gt;"&gt;
+	&lt;!--[if lt IE 9]&gt;
+	&lt;script src="&lt;?php echo get_template_directory_uri(); ?&gt;/js/html5.js"&gt;&lt;/script&gt;
+	&lt;![endif]--&gt;
+
+&lt;!-- WPC CODE STARTS HERE --&gt;
+
+&lt;meta name="wpc-appid" content="c14e93aa-27d7-df11-a844-00237de2db9e"&gt;
+&lt;link rel="stylesheet" type="text/css" href="styles/wpc.css"&gt;
+&lt;script type="text/javascript" src="js/wpc.js"&gt;&lt;/script&gt;
+
+&lt;!-- WPC CODE ENDS HERE --&gt;
+
+	&lt;?php wp_head(); ?&gt;
+&lt;/head&gt;
+</pre>
+</section>
+
+<section><p>Developed with &lt;3 by Matteo Spinelli for Microsoft in 2014</p></section>
+</div>
+
+
+
+</body></html>

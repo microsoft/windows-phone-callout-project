@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+@media screen and (orientation:portrait) {
+	@-ms-viewport {
+		width: device-width;
+	}
+}
+@media screen and (orientation:landscape) {
+	@-ms-viewport {
+		width: device-height;
+	}
+}
+
+.wpc-container, .wpc-container * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.wpc-container {
+	position: absolute;
+	z-index: 2147483641;
+	font-size: 10px;
+	font-family: sans-serif;
+
+	padding: 2em 2em 2em 11em;
+	line-height: 1;
+	overflow: hidden;
+
+	min-height: 14em;
+
+	-webkit-transition: -webkit-transform 0 ease-out;
+	-moz-transition: -moz-transform 0 ease-out;
+	-ms-transition: -ms-transform 0 ease-out;
+	-o-transition: -o-transform 0 ease-out;
+	transition: transform 0 ease-out;
+
+	-webkit-transform: translate(0,0);
+	-moz-transform: translate(0,0);
+	-ms-transform: translate(0,0);
+	-o-transform: translate(0,0);
+	transform: translate(0,0);
+}
+
+.wpc-container:before,
+.wpc-container:after {
+    content: " ";
+    display: table;
+}
+
+.wpc-container:after {
+    clear: both;
+}
+
+.wpc-container .close {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	border: 0;
+	margin: 0;
+	padding: 0;
+	background: rgba(255,255,255,0.2);
+	font-size: 2.9em;
+	width: 2em;
+	height: 2em;
+	color: inherit;
+	outline: none!important;
+}
+
+.wpc-container .close:after {
+	content: '×';
+}
+
+.wpc-container p {
+	padding: 0;
+	margin: 0;
+	background: transparent;
+	font-size: 1.5em;
+	line-height: 130%;
+}
+
+
+.wpc-container .wpc-icon {
+	position: absolute;
+	background-repeat: no-repeat;
+	background-position: 50%;
+	background-size: 100%;
+	width: 7.2em;
+	height: 7.2em;
+	left: 2em;
+	top: 2em;
+}
+
+.wpc-container .wpc-button {
+	display: block;
+	float: left;
+	margin-top: 1em;
+	color: inherit;
+	text-decoration: none;
+	border-width: 0.25em;
+	border-style: solid;
+	padding: 0.8em 1em;
+	-webkit-transition: -webkit-transform 0.15s ease-out;
+	-moz-transition: -moz-transform 0.15s ease-out;
+	-ms-transition: -ms-transform 0.15s ease-out;
+	-o-transition: -o-transform 0.15s ease-out;
+	transition: transform 0.15s ease-out;
+}
+
+.wpc-container .button:active {
+	-webkit-transform: scale(0.96);
+	-moz-transform: scale(0.96);
+	-ms-transform: scale(0.96);
+	-o-transform: scale(0.96);
+	transform: scale(0.96);
+}
