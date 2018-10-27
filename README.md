@@ -239,3 +239,5 @@ excerpt of the header file that comes with a default installation of WordPress.
 ----
 
 Developed with <3 by Matteo Spinelli for Microsoft in 2014
+
+This project has been discontinued
